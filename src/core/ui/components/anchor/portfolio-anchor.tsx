@@ -13,13 +13,13 @@ const PortfolioAnchor = ({
 }): React.ReactElement => {
   const {
     label = "",
-    href = "#",
+    href = "",
     color = "blue",
-    size = "md",
-    target = "_self",
-    rel = "noopener noreferrer",
+    size = "sm",
+    target = "_blank",
     fullWidth = false,
     textAlign = "center", 
+    rel = "noopener noreferrer",
   } = schema || {};
 
   return (
@@ -28,8 +28,6 @@ const PortfolioAnchor = ({
         href={href}
         onClick={onClick}
         c={color}
-        size={size}
-        target={target}
         rel={rel}
       >
         {label || children}
