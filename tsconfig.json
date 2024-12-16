@@ -27,6 +27,8 @@
       "@action/*": ["./src/core/ui/components/toggle-theme/*"],
       "@hooks/*": ["./src/app/[locale]/(auth)/_lib/hooks/*"],
       "@InputRenderer/*": ["./src/core/ui/components/inputs-renderer/*"],
+      "@authComponents/*": ["./src/app/[locale]/(auth)/_lib/components/*"],
+      
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

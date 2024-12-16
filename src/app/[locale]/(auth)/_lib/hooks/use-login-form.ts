@@ -2,7 +2,9 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useRouter } from "next/navigation";
-import { validationSchema } from "../utils/login-validation-schema";
+import { validationSchema } from "@auth/_lib/utils/login-validation-schema";
+import { AUTH_ROUTES } from "@auth/_lib/constants/auth-routes";
+import { submitHandler } from "@/core/ui/utils/submit-handler";
 
 export const useLoginForm = () => {
   const router = useRouter();
@@ -14,18 +16,10 @@ export const useLoginForm = () => {
     resolver: yupResolver(validationSchema),
   });
 
-
-  const submit = async (data: any) => {
+  const submit = async () => {
     setLoading(true);
-    try {
-      console.log(data);
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      router.replace("/en/main-content");
-    } catch (error) {
-      console.error("Login failed", error);
-    } finally {
-      setLoading(false);
-    }
+    await submitHandler(router, AUTH_ROUTES.MAINCONTENT); 
+    setLoading(false);
   };
 
   const handleForgotPasswordSubmit = () => {

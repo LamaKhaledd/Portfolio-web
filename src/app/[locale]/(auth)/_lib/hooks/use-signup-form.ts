@@ -2,32 +2,27 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useRouter } from "next/navigation";
-import { signUpSchema } from "../utils/sign-up-validation-schema";
+import { signUpSchema } from "@auth/_lib/utils/sign-up-validation-schema";
+import { AUTH_ROUTES } from "@auth/_lib/constants/auth-routes";
+import { submitHandler } from "@/core/ui/utils/submit-handler";
 
 export const useSignUpForm = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
   const methods = useForm({
-    resolver: yupResolver(signUpSchema)
+    resolver: yupResolver(signUpSchema),
   });
 
-  const submit = async (data: any) => {
+  const submit = async () => {
     setLoading(true);
-    try {
-      console.log(data);
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      router.replace("/en/main-content");
-    } catch (error) {
-      console.error("Signup failed", error);
-    } finally {
-      setLoading(false);
-    }
+    await submitHandler(router, AUTH_ROUTES.MAINCONTENT);
+    setLoading(false);
   };
 
   const handleLoginClick = () => {
     if (typeof window !== "undefined") {
-      router.replace("/en/login");
+      router.replace(AUTH_ROUTES.LOGIN);
     }
   };
 
@@ -35,6 +30,6 @@ export const useSignUpForm = () => {
     methods,
     loading,
     submit,
-    handleLoginClick
+    handleLoginClick,
   };
 };

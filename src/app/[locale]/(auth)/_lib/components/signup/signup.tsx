@@ -11,11 +11,11 @@ import {
 } from "@mantine/core";
 import { FormProvider } from "react-hook-form";
 import InputRenderer from "@/core/ui/components/inputs-renderer/portfolio-inputs-renderer";
-import { signUpFields } from "@auth/_lib/utils/signup-schema";
 import { useSignUpForm } from "@auth/_lib/hooks/use-signup-form";
 import { useGradientBackground } from "@auth/_lib/hooks/gradient-background";
 import PortfolioAnchor from "@/core/ui/components/anchor/portfolio-anchor";
 import PortfolioButton from "@/core/ui/components/button/portfolio-button";
+import { signupSchema } from "@auth/_lib/utils/signup-schema";
 
 const SignUpForm = () => {
   const { methods, loading, submit, handleLoginClick } = useSignUpForm();
@@ -29,8 +29,7 @@ const SignUpForm = () => {
           shadow="md"
           maw="40rem"
           mx="auto"
-          mt="5rem"
-          mb="5rem"
+          my="5rem"
         >
           <form onSubmit={methods.handleSubmit(submit)}>
             <Stack>
@@ -39,7 +38,7 @@ const SignUpForm = () => {
               </Title>
 
               <Grid>
-                {signUpFields.map((field, index) => (
+                {signupSchema.map((field, index) => (
                   <GridCol span={12} key={index} pb="md">
                     <InputRenderer schema={field} />
                   </GridCol>

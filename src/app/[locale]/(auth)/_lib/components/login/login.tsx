@@ -2,11 +2,11 @@
 import { Stack, Title, Paper, Grid, GridCol, Flex, Modal, TextInput } from "@mantine/core";
 import { FormProvider } from "react-hook-form";
 import InputRenderer from "@InputRenderer/portfolio-inputs-renderer";
-import { loginSchema } from "@auth/_lib/utils/login-schema";
 import { useGradientBackground } from "@auth/_lib/hooks/gradient-background";
 import { useLoginForm } from "@auth/_lib/hooks/use-login-form";
 import PortfolioAnchor from "@components/anchor/portfolio-anchor";
 import PortfolioButton from "@/core/ui/components/button/portfolio-button";
+import { loginSchema } from "@auth/_lib/utils/login-schema";
 
 const LoginForm = () => {
   const {

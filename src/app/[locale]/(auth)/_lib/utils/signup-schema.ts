@@ -1,28 +1,29 @@
-import { InputType } from "@/core/ui/models/input-base.type";
+import { INPUT_TYPE } from "@/core/ui/constants/input-renderer-constants";
 
-export const signUpFields = [
+
+export const signupSchema = [
   {
-    inputType: "text" as InputType,
+    inputType: INPUT_TYPE.TEXT,
     label: "Username",
     name: "username",
   },
   {
-    inputType: "text" as InputType,
+    inputType: INPUT_TYPE.TEXT,
     label: "Email",
     name: "email",
   },
   {
-    inputType: "password" as InputType,
+    inputType: INPUT_TYPE.PASSWORD,
     label: "Password",
     name: "password",
   },
   {
-    inputType: "password" as InputType,
+    inputType: INPUT_TYPE.PASSWORD,
     label: "Confirm Password",
     name: "confirmPassword",
   },
   {
-    inputType: "checkbox" as InputType,
+    inputType: INPUT_TYPE.CHECKBOX,
     label: "Terms and conditions",
     name: "terms",
     options: [
@@ -39,7 +40,7 @@ export const signUpFields = [
     ],
   },
   {
-    inputType: "radio" as InputType,
+    inputType: INPUT_TYPE.RADIO,
     label: "Gender",
     name: "gender",
     options: [

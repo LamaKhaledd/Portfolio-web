@@ -1,10 +1,8 @@
-import LoginForm from "../_lib/components/login/login";
+import LoginForm from "@authComponents/login/login";
 
 const LoginPage= () => {
     return (
-        <div>
             <LoginForm />
-        </div>
     );
 } 
 

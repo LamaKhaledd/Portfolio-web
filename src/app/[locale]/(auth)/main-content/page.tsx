@@ -1,10 +1,8 @@
-import MainContent from "../_lib/components/main-content/main-content";
+import MainContent from "@authComponents/main-content/main-content";
 
 const MainContentPage= () => {
     return (
-        <div>
             <MainContent />
-        </div>
     );
 } 
 

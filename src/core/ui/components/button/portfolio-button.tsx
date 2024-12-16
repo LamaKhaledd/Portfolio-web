@@ -1,19 +1,19 @@
 import React from "react";
 import { Button, px } from "@mantine/core";
-import { IButton } from "./models/portfolio-button.interface";
+import { IPortfolioButton } from "./models/portfolio-button.interface";
 const PortfolioButton = ({
   schema = {},
   children = null,
   onClick,
   loading = false,
 }: {
-  schema?: IButton;
+  schema?: IPortfolioButton;
   children?: React.ReactNode;
   onClick?: () => void;
   loading?: boolean;
 }): React.ReactElement => {
   const {
-    label = "",
+    label,
     type = "button",
     color = "blue",
     size = "compact-md",
@@ -21,7 +21,7 @@ const PortfolioButton = ({
     rightSection,
     leftSection,
     fullWidth = false,
-    radius = 2,
+    radius = "xs",
   } = schema || {};
 
   return (

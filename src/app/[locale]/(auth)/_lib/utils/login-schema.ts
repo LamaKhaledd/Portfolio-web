@@ -1,14 +1,14 @@
-import { InputType } from "@/core/ui/models/input-base.type";
+import { INPUT_TYPE } from "@/core/ui/constants/input-renderer-constants";
 
 export const loginSchema = [
   {
-    inputType: "text" as InputType,
+    inputType: INPUT_TYPE.TEXT,
     label: "Email",
     name: "username",
   },
 
   {
-    inputType: "password" as InputType,
+    inputType: INPUT_TYPE.PASSWORD,
     label: "Password",
     name: "password",
   },
@@ -16,9 +16,10 @@ export const loginSchema = [
 
 export const forgotPasswordSchema = [
   {
-    inputType: "text" as InputType,
+    inputType: INPUT_TYPE.TEXT,
     name: "forgotEmail",
     label: "Enter your email to reset your password",
     placeholder: "example@domain.com",
   },
 ];
+

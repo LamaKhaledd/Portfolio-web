@@ -1,6 +1,7 @@
-import { AnchorVariant, MantineSize } from "@mantine/core";
+import { MantineSize } from "@mantine/core";
+import { TextAlignment } from "./portfolio-anchor.type";
 
-export interface IAnchor {
+export interface IPortfolioAnchor {
   label?: string;
   color?: string;
   href?: string;
@@ -9,5 +10,5 @@ export interface IAnchor {
   underline?: boolean;
   target?: string;
   rel?: string;
-  textAlign?: "left" | "center" | "right";
+  textAlign?: TextAlignment;
 }

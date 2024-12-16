@@ -1,10 +1,8 @@
-import SignUpForm from "../_lib/components/signup/signup";
+import SignUpForm from "@authComponents/signup/signup";
 
 const SignupPage= () => {
     return (
-        <div>
             <SignUpForm />
-        </div>
     );
 } 
 

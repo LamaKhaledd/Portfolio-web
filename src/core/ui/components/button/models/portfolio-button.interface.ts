@@ -1,7 +1,7 @@
 import { ButtonVariant, MantineSize } from "@mantine/core";
 import { ButtonType, CompactButtonSize } from "./portfolio-button.type";
 
-export interface IButton {
+export interface IPortfolioButton {
   type?: ButtonType;
   label?: string;
   color?: string;

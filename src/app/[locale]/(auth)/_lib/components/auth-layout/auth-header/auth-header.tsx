@@ -8,7 +8,7 @@ import { ActionToggle } from "@action/toggle-theme";
 import { useAuthRedirect } from "@hooks/use-auth-header-redirect";
 
 export const AuthHeader = () => {
-  const { loading, onButtonClick } = useAuthRedirect();
+  const { loading, onLoginButtonClick } = useAuthRedirect();
 
   return (
     <Card shadow="md">
@@ -40,7 +40,7 @@ export const AuthHeader = () => {
             ))}
           </Flex>
           <PortfolioButton
-            onClick={onButtonClick}
+            onClick={onLoginButtonClick}
             schema={{
               label: LABELS.login,
               size: "md",

@@ -7,20 +7,13 @@ import {
 import PortfolioAnchor from "@/core/ui/components/anchor/portfolio-anchor";
 
 const AuthFooter = () => (
-  <Container size="xl" mih="2rem" mt={"1rem"}>
+  <Container size="xl" mih="2rem" mt="1rem">
     <Text size="xs" c="dimmed" ta="center">
       <Flex align="center" gap="4px" justify="center" flex="wrap">
         {FOOTER_TEXT}
         {FOOTER_LINKS.map((link, index) => (
           <React.Fragment key={link.href}>
-            <PortfolioAnchor
-              schema={{
-                label: link.label,
-                href: link.href,
-                target: "_blank",
-                rel: "noopener noreferrer",
-              }}
-            >
+            <PortfolioAnchor >
               {link.label}
             </PortfolioAnchor>
             {index < FOOTER_LINKS.length - 1 && <span>,</span>}

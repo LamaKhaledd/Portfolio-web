@@ -16,7 +16,7 @@
     const nameElement = document.getElementById(nameElementId);
     const roleElement = document.getElementById(roleElementId);
   
-    const typeText1 = () => {
+    const userNameTyping = () => {
       if (index1 < text1.length) {
         if (nameElement) {
           nameElement.innerHTML += text1[index1] === " " ? "&nbsp;" : text1[index1];
@@ -24,11 +24,11 @@
         index1++;
       } else {
         clearInterval(interval1);
-        setTimeout(typeText2, 250);
+        setTimeout(userJobTyping, 250);
       }
     };
   
-    const typeText2 = () => {
+    const userJobTyping = () => {
       const interval2 = setInterval(() => {
         if (index2 < text2.length) {
           if (roleElement) {
@@ -44,7 +44,7 @@
       }, typingSpeed);
     };
   
-    const interval1 = setInterval(typeText1, typingSpeed);
+    const interval1 = setInterval(userNameTyping, typingSpeed);
   
     return () => {
       clearInterval(interval1);

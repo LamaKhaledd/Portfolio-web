@@ -1,19 +1,19 @@
 import React from "react";
 import { Anchor } from "@mantine/core";
-import { IAnchor } from "./models/portfolio-anchor.interface";
+import { IPortfolioAnchor } from "./models/portfolio-anchor.interface";
 
 const PortfolioAnchor = ({
   schema = {},
   children = null,
   onClick,
 }: {
-  schema?: IAnchor;
+  schema?: IPortfolioAnchor;
   children?: React.ReactNode;
   onClick?: () => void;
 }): React.ReactElement => {
   const {
-    label = "",
-    href = "",
+    label,
+    href,
     color = "blue",
     size = "xs",
     target = "_blank",
