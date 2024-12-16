@@ -1,4 +1,4 @@
-import { InputSchema } from "../../models/input-base.type";
+import { InputSchema } from "@models/input-base.type";
 
 export interface InputComponentProps {
   schema: InputSchema;

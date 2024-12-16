@@ -15,7 +15,7 @@ const PortfolioAnchor = ({
     label = "",
     href = "",
     color = "blue",
-    size = "sm",
+    size = "xs",
     target = "_blank",
     fullWidth = false,
     textAlign = "center", 
@@ -29,6 +29,7 @@ const PortfolioAnchor = ({
         onClick={onClick}
         c={color}
         rel={rel}
+        size={size}
       >
         {label || children}
       </Anchor>

@@ -1,11 +1,12 @@
 "use client";
-import { Stack, Title, Button, Paper, Grid, GridCol, Flex, Modal, TextInput } from "@mantine/core";
+import { Stack, Title, Paper, Grid, GridCol, Flex, Modal, TextInput } from "@mantine/core";
 import { FormProvider } from "react-hook-form";
 import InputRenderer from "@InputRenderer/portfolio-inputs-renderer";
 import { loginSchema } from "@auth/_lib/utils/login-schema";
 import { useGradientBackground } from "@auth/_lib/hooks/gradient-background";
 import { useLoginForm } from "@auth/_lib/hooks/use-login-form";
 import PortfolioAnchor from "@components/anchor/portfolio-anchor";
+import PortfolioButton from "@/core/ui/components/button/portfolio-button";
 
 const LoginForm = () => {
   const {
@@ -49,9 +50,9 @@ const LoginForm = () => {
                 onClick={() => setModalOpened(true)}
               />
 
-              <Button type="submit" loading={loading}>
+              <PortfolioButton schema={{ type: "submit" }} loading={loading}>
                 Login
-              </Button>
+              </PortfolioButton>
 
               <PortfolioAnchor
                 schema={{
@@ -81,7 +82,7 @@ const LoginForm = () => {
             value={forgotEmail}
             onChange={(e) => setForgotEmail(e.currentTarget.value)}
           />
-          <Button onClick={handleForgotPasswordSubmit}>Submit</Button>
+          <PortfolioButton onClick={handleForgotPasswordSubmit}>Submit</PortfolioButton>
         </Stack>
       </Modal>
     </Flex>

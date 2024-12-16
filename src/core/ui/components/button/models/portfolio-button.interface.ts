@@ -11,4 +11,5 @@ export interface IButton {
   leftSection?: React.ReactNode;
   fullWidth?: boolean;
   radius?: number;
+  loading?: boolean;
 }

@@ -1,26 +1,27 @@
 import React from "react";
 import { Button, px } from "@mantine/core";
 import { IButton } from "./models/portfolio-button.interface";
-
 const PortfolioButton = ({
   schema = {},
   children = null,
   onClick,
+  loading = false,
 }: {
   schema?: IButton;
-  children?: React.ReactNode; 
-  onClick: () => void;
+  children?: React.ReactNode;
+  onClick?: () => void;
+  loading?: boolean;
 }): React.ReactElement => {
   const {
     label = "",
     type = "button",
-    color = "pink",
+    color = "blue",
     size = "compact-md",
-    variant = "gradient",
+    variant = "filled",
     rightSection,
     leftSection,
     fullWidth = false,
-    radius=50,
+    radius = 2,
   } = schema || {};
 
   return (
@@ -33,15 +34,15 @@ const PortfolioButton = ({
       leftSection={leftSection}
       onClick={onClick}
       fullWidth={fullWidth}
-      gradient={{ from: "blue", to: "black", deg: 135 }} 
-      radius={radius} 
+      radius={radius}
+      loading={loading} 
       styles={(theme) => ({
         root: {
-          boxShadow: theme.shadows.md, 
+          boxShadow: theme.shadows.md,
           transition: "transform 0.2s ease, box-shadow 0.2s ease",
           "&:hover": {
-            transform: "scale(1.05)", 
-            boxShadow: theme.shadows.lg, 
+            transform: "scale(1.05)",
+            boxShadow: theme.shadows.lg,
           },
         },
       })}
@@ -50,5 +51,4 @@ const PortfolioButton = ({
     </Button>
   );
 };
-
 export default PortfolioButton;

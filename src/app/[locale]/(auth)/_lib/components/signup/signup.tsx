@@ -15,6 +15,7 @@ import { signUpFields } from "@auth/_lib/utils/signup-schema";
 import { useSignUpForm } from "@auth/_lib/hooks/use-signup-form";
 import { useGradientBackground } from "@auth/_lib/hooks/gradient-background";
 import PortfolioAnchor from "@/core/ui/components/anchor/portfolio-anchor";
+import PortfolioButton from "@/core/ui/components/button/portfolio-button";
 
 const SignUpForm = () => {
   const { methods, loading, submit, handleLoginClick } = useSignUpForm();
@@ -45,9 +46,9 @@ const SignUpForm = () => {
                 ))}
               </Grid>
 
-              <Button type="submit" loading={loading}>
+              <PortfolioButton schema={{ type: "submit" }} loading={loading}>
                 Sign Up
-              </Button>
+              </PortfolioButton>
 
               <PortfolioAnchor
                 schema={{
