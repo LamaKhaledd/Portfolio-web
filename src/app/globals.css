@@ -24,6 +24,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  font-family: "Poppins", sans-serif; 
+  letter-spacing: 1px;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
