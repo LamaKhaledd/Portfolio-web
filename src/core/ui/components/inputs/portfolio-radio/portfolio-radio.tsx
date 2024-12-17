@@ -1,12 +1,12 @@
 import React from "react";
 import { Radio, RadioGroup } from "@mantine/core";
-import { IRadioInput } from "./models/portfolio-radio.interface";
+import { IPortfolioRadioInput } from "./models/portfolio-radio.interface";
 const PortfolioRadioInput = ({
   schema,
   value,
   onChange,
 }: {
-  schema: IRadioInput;
+  schema: IPortfolioRadioInput;
   value: string;
   onChange: ({ value }: { value: string }) => void;
 }): React.ReactNode => {

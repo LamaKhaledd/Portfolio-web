@@ -1,10 +1,10 @@
 import {
   BaseInputSchema,
-  ILamaOption,
+  IPortfolioOption,
 } from "@/core/ui/models/input-base.interface";
 
-export interface ISelectInput extends BaseInputSchema {
-  options: ILamaOption[];
+export interface IPortfolioSelectInput extends BaseInputSchema {
+  options: IPortfolioOption[];
   placeholder?: string;
   searchable?: boolean;
   clearable?: boolean;

@@ -16,14 +16,12 @@ export const useSignUpForm = () => {
 
   const submit = async () => {
     setLoading(true);
-    await submitHandler(router, AUTH_ROUTES.MAINCONTENT);
+    await submitHandler(AUTH_ROUTES.MAINCONTENT);
     setLoading(false);
   };
 
   const handleLoginClick = () => {
-    if (typeof window !== "undefined") {
       router.replace(AUTH_ROUTES.LOGIN);
-    }
   };
 
   return {

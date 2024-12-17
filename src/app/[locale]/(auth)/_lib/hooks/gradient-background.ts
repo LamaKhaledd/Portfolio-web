@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useWindowScroll } from "@mantine/hooks";
 import { calculateGradient } from "../utils/calculate-gradient";
 
 export const useGradientBackground = () => {
@@ -6,15 +7,11 @@ export const useGradientBackground = () => {
     "linear-gradient(to bottom, rgba(23, 96, 159, 0.3), white)"
   );
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY || 0;
-      setBackground(calculateGradient(scrollY));
-    };
+  const [scroll] = useWindowScroll();
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  useEffect(() => {
+    setBackground(calculateGradient(scroll.y));
+  }, [scroll.y]);
 
   return background;
 };

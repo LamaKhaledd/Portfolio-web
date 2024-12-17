@@ -1,13 +1,13 @@
 import React from "react";
 import { Switch } from "@mantine/core";
-import { ISwitchInput } from "./models/portfolio-switch.interface";
+import { IPortfolioSwitchInput } from "./models/portfolio-switch.interface";
 
 const PortfolioSwitchInput = ({
   schema,
   value,
   onChange,
 }: {
-  schema: ISwitchInput;
+  schema: IPortfolioSwitchInput;
   value: boolean;
   onChange: ({ value }: { value: boolean }) => void;
 }): React.ReactNode => {

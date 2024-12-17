@@ -1,12 +1,12 @@
 import React from "react";
 import { Textarea as MantineTextarea } from "@mantine/core";
-import { ITextarea } from "./models/prtofolio-textarea.interface";
+import { IPortfolioTextarea } from "./models/prtofolio-textarea.interface";
 const PortfolioTextarea = ({
   schema,
   value,
   onChange,
 }: {
-  schema: ITextarea;
+  schema: IPortfolioTextarea;
   value: string;
   onChange?: ({ value }: { value: string }) => void;
 }): React.ReactNode => {

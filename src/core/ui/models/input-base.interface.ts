@@ -11,7 +11,7 @@ export interface BaseInputSchema {
   placeholder?: string;
 }
 
-export interface ILamaOption {
+export interface IPortfolioOption {
   id: string;
   value: string;
   label: string;

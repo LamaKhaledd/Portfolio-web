@@ -1,13 +1,13 @@
 import React from "react";
 import { TextInput as MantineTextInput } from "@mantine/core";
-import { ITextInput } from "./models/portfolio-text.interface";
+import { IPortfolioTextInput } from "./models/portfolio-text.interface";
 
 const PortfolioTextInput = ({
   schema,
   value,
   onChange,
 }: {
-  schema: ITextInput;
+  schema: IPortfolioTextInput;
   value?: string;
   onChange?: ({ value }: { value: string }) => void;
 }): React.ReactNode => {

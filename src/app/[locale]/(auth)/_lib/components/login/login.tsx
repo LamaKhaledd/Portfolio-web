@@ -1,5 +1,14 @@
 "use client";
-import { Stack, Title, Paper, Grid, GridCol, Flex, Modal, TextInput } from "@mantine/core";
+import {
+  Stack,
+  Title,
+  Paper,
+  Grid,
+  GridCol,
+  Flex,
+  Modal,
+  TextInput,
+} from "@mantine/core";
 import { FormProvider } from "react-hook-form";
 import InputRenderer from "@InputRenderer/portfolio-inputs-renderer";
 import { useGradientBackground } from "@auth/_lib/hooks/gradient-background";
@@ -25,8 +34,8 @@ const LoginForm = () => {
   return (
     <Flex bg={background} mih="100vh" align="center" justify="center">
       <FormProvider {...methods}>
-        <Paper p="xl" withBorder shadow="md" miw="40rem" mx="auto">
-          <form onSubmit={methods.handleSubmit(submit)}>
+        <form onSubmit={methods.handleSubmit(submit)}>
+          <Paper p="xl" withBorder shadow="md" miw="40rem" mx="auto">
             <Stack>
               <Title ta="center" order={2} mb="lg">
                 LOGIN
@@ -44,8 +53,6 @@ const LoginForm = () => {
                 schema={{
                   label: "Forgot your password?",
                   size: "sm",
-                  color: "blue",
-                  textAlign: "left",
                 }}
                 onClick={() => setModalOpened(true)}
               />
@@ -57,14 +64,12 @@ const LoginForm = () => {
               <PortfolioAnchor
                 schema={{
                   label: "Don’t have an account? Sign up!",
-                  size: "sm",
-                  color: "blue",
                 }}
                 onClick={() => methods.reset()}
               />
             </Stack>
-          </form>
-        </Paper>
+          </Paper>
+        </form>
       </FormProvider>
 
       <Modal
@@ -82,7 +87,9 @@ const LoginForm = () => {
             value={forgotEmail}
             onChange={(e) => setForgotEmail(e.currentTarget.value)}
           />
-          <PortfolioButton onClick={handleForgotPasswordSubmit}>Submit</PortfolioButton>
+          <PortfolioButton onClick={handleForgotPasswordSubmit}>
+            Submit
+          </PortfolioButton>
         </Stack>
       </Modal>
     </Flex>

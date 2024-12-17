@@ -21,17 +21,10 @@ const SignUpForm = () => {
   const { methods, loading, submit, handleLoginClick } = useSignUpForm();
   const background = useGradientBackground();
   return (
-    <Flex bg={background}>
+    <Flex bg={background} align="center" justify="center">
       <FormProvider {...methods}>
-        <Paper
-          p="xl"
-          withBorder
-          shadow="md"
-          maw="40rem"
-          mx="auto"
-          my="5rem"
-        >
-          <form onSubmit={methods.handleSubmit(submit)}>
+        <form onSubmit={methods.handleSubmit(submit)}>
+          <Paper p="xl" withBorder shadow="md" maw="40rem" mx="auto" my="5rem">
             <Stack>
               <Title ta="center" order={2} mb="lg">
                 SIGN UP
@@ -52,15 +45,13 @@ const SignUpForm = () => {
               <PortfolioAnchor
                 schema={{
                   label: "Already have an account? Login!",
-                  color: "blue",
-                  size: "sm",
                   underline: true,
                 }}
                 onClick={handleLoginClick}
               />
             </Stack>
-          </form>
-        </Paper>
+          </Paper>
+        </form>
       </FormProvider>
     </Flex>
   );

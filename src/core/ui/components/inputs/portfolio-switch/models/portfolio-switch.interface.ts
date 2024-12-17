@@ -1,5 +1,5 @@
 import { BaseInputSchema } from "@/core/ui/models/input-base.interface";
 
-export interface ISwitchInput extends BaseInputSchema {
+export interface IPortfolioSwitchInput extends BaseInputSchema {
   disabled?: boolean;
 }

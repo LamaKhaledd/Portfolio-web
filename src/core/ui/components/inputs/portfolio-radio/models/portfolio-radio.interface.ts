@@ -1,8 +1,8 @@
 import {
   BaseInputSchema,
-  ILamaOption,
+  IPortfolioOption,
 } from "@/core/ui/models/input-base.interface";
 
-export interface IRadioInput extends BaseInputSchema {
-  options: ILamaOption[];
+export interface IPortfolioRadioInput extends BaseInputSchema {
+  options: IPortfolioOption[];
 }
