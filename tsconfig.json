@@ -28,6 +28,10 @@
       "@hooks/*": ["./src/app/[locale]/(auth)/_lib/hooks/*"],
       "@InputRenderer/*": ["./src/core/ui/components/inputs-renderer/*"],
       "@authComponents/*": ["./src/app/[locale]/(auth)/_lib/components/*"],
+
+
+      "@dashboard/*": ["./src/app/[locale]/dashboard/*"],
+
       
     }
   },

@@ -1,7 +1,3 @@
-/********************************************************************** */
-/*Will be moved to the dashboard utils section*/
-/*This function will be used for typing effect in the dashboard section*/
-/********************************************************************** */
   export const typeTextEffect = (
     text1: string,
     text2: string,

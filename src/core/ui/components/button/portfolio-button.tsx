@@ -6,11 +6,13 @@ const PortfolioButton = ({
   children = null,
   onClick,
   loading = false,
+  style,
 }: {
   schema?: IPortfolioButton;
   children?: React.ReactNode;
   onClick?: () => void;
   loading?: boolean;
+  style?: React.CSSProperties;
 }): React.ReactElement => {
   const {
     label,
@@ -36,16 +38,7 @@ const PortfolioButton = ({
       fullWidth={fullWidth}
       radius={radius}
       loading={loading} 
-      styles={(theme) => ({
-        root: {
-          boxShadow: theme.shadows.md,
-          transition: "transform 0.2s ease, box-shadow 0.2s ease",
-          "&:hover": {
-            transform: "scale(1.05)",
-            boxShadow: theme.shadows.lg,
-          },
-        },
-      })}
+      style={style}
     >
       {label || children}
     </Button>

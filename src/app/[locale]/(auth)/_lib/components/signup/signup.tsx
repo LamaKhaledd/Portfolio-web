@@ -12,7 +12,7 @@ import {
 import { FormProvider } from "react-hook-form";
 import InputRenderer from "@/core/ui/components/inputs-renderer/portfolio-inputs-renderer";
 import { useSignUpForm } from "@auth/_lib/hooks/use-signup-form";
-import { useGradientBackground } from "@auth/_lib/hooks/gradient-background";
+import { useGradientBackground } from "@/core/ui/hooks/gradient-background";
 import PortfolioAnchor from "@/core/ui/components/anchor/portfolio-anchor";
 import PortfolioButton from "@/core/ui/components/button/portfolio-button";
 import { signupSchema } from "@auth/_lib/utils/signup-schema";
