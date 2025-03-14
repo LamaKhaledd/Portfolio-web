@@ -1,0 +1,4 @@
+
+interface AboutCardProps {
+    openContactModal: () => void;
+  }

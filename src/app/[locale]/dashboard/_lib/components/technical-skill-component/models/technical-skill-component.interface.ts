@@ -1,0 +1,3 @@
+interface TechnicalSkillProps {
+    skill: string; 
+  }

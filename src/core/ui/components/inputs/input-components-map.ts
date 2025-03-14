@@ -1,4 +1,4 @@
-import { INPUT_TYPE } from "@ui/constants/input-renderer-constants";
+import { INPUT_TYPE } from "@/core/constants/input-renderer-constants";
 import { InputComponentProps } from "./input-component-props";
 import PortfolioCheckboxInput from "./portfolio-checkbox/portfolio-checkbox";
 import PortfolioPasswordInput from "./portfolio-password/portfolio-password";

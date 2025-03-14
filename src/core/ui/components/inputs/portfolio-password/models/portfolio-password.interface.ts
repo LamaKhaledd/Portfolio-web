@@ -1,5 +1,5 @@
-import { BaseInputSchema } from "@/core/ui/models/input-base.interface";
+import { BaseInputSchema } from "@/core/models/input-base.interface";
 
-export interface IPasswordInput extends BaseInputSchema {
+export interface IPortfolioPasswordInput extends BaseInputSchema {
   toggleVisibility?: boolean;
 }

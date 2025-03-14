@@ -1,9 +1,9 @@
 import {
   BaseInputSchema,
-  ILamaOption,
-} from "@/core/ui/models/input-base.interface";
+  IPortfolioOption,
+} from "@/core/models/input-base.interface";
 
-export interface ICheckboxInput extends BaseInputSchema {
-  options?: ILamaOption[];
+export interface IPortfolioCheckboxInput extends BaseInputSchema {
+  options?: IPortfolioOption[];
   indeterminate?: boolean;
 }

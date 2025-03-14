@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AUTH_ROUTES } from "@auth/_lib/constants/auth-routes";
-import { submitHandler } from "@/core/ui/utils/submit-handler";
+import { submitHandler } from "@/core/utils/submit-handler";
 
 export const useAuthRedirect = () => {
   const [loading, setLoading] = useState(false);
