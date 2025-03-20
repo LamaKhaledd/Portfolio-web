@@ -9,7 +9,7 @@ import {
   Box,
   Title,
 } from "@mantine/core";
-import { skillsSchema } from "@/app/[locale]/dashboard/_lib/constants/skills-schema";
+import { skillsSchema } from "@dashboard/constants/skills-schema";
 import { getCategoryIcon } from "@dashboard/utils/get-category-icon";
 import { MAIN_COLORS } from "@/core/constants/colors";
 
@@ -22,20 +22,19 @@ const UserSkillsPanel = () => {
         orientation="vertical"
       >
         <TabsList justify="left">
-          {skillsSchema.map((category) => (
-            <TabsTab key={category.category} value={category.category}>
+          {skillsSchema.map(({ category }) => (
+            <TabsTab key={category} value={category}>
               <Flex align="center" gap="md">
-                <Text>{getCategoryIcon(category.category)}</Text>
-                <Title order={4}>{category.category}</Title>
+                <Text>{getCategoryIcon(category)}</Text>
+                <Title order={4}>{category}</Title>
               </Flex>
             </TabsTab>
           ))}
         </TabsList>
-
-        {skillsSchema.map((category) => (
-          <TabsPanel key={category.category} value={category.category} py="md">
+        {skillsSchema.map(({ category, skills }) => (
+          <TabsPanel key={category} value={category} py="md">
             <Flex wrap="wrap" gap="md" justify="center">
-              {category.skills.map((skill, index) => (
+              {skills.map((skill, index) => (
                 <Box
                   key={index}
                   bg="rgba(255, 255, 255, 0.1)"

@@ -2,13 +2,7 @@ import React from "react";
 import { Paper, Text } from "@mantine/core";
 import { MAIN_COLORS } from "@/core/constants/colors";
 
-interface UserEducationCardProps {
-  degree: string;
-  institution: string;
-  duration: string;
-}
-
-const UserEducationCard: React.FC<UserEducationCardProps> = ({ degree, institution, duration }) => {
+const UserEducationCard: React.FC<IUserEducationCardProps> = ({ degree, institution, duration }) => {
   return (
     <Paper withBorder p="xs" radius="10">
       <Text fw="bold">{degree}</Text>

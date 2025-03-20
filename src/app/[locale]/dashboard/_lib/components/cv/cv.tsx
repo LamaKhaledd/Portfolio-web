@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, Group, Stack } from "@mantine/core";
+import { Container, Grid, GridCol, Group, Stack } from "@mantine/core";
 import PortfolioButton from "@components/button/portfolio-button";
 import { downloadPDF } from "@dashboard/utils/download-pdf";
 import PersonalInfo from "../user-personal-info/user-personal-info";
@@ -28,7 +28,6 @@ const CV = () => {
             alert("Edit CV clicked");
           }}
           schema={{
-            variant: "filled",
             size: "compact-lg",
             color: MAIN_COLORS.SECONDARY_BUTTON,
             label: "Edit My CV",
@@ -41,17 +40,17 @@ const CV = () => {
         <CoreProjects></CoreProjects>
 
         <Grid my={30}>
-          <Grid.Col span={{ base: 12, md: 4 }}>
+          <GridCol span={{ md: 4 }}>
             <UserTechnicalSkills></UserTechnicalSkills>
-          </Grid.Col>
+          </GridCol>
 
-          <Grid.Col span={{ base: 12, md: 4 }}>
+          <GridCol span={{ md: 4 }}>
             <UserSpokenLanguages></UserSpokenLanguages>
-          </Grid.Col>
+          </GridCol>
 
-          <Grid.Col span={{ base: 12, md: 4 }}>
+          <GridCol span={{ md: 4 }}>
             <UserEducationInfo></UserEducationInfo>
-          </Grid.Col>
+          </GridCol>
         </Grid>
       </Stack>
 

@@ -1,20 +1,27 @@
 import { useState } from "react";
-import useAddSkill from "@dashboard/utils/add-skill";
-import useRemoveSkill from "@dashboard/utils/remove-skill";
 
 const useSkills = () => {
   const [skills, setSkills] = useState<string[]>([]);
   const [skillInput, setSkillInput] = useState("");
+  const trimmedSkill = skillInput.trim(); 
 
-  const addSkill = useAddSkill(skills, setSkills, skillInput, setSkillInput);
-  const removeSkill = useRemoveSkill(skills, setSkills);
+  const addSkill = () => {
+    if (trimmedSkill && !skills.includes(trimmedSkill)) {
+      setSkills([...skills, trimmedSkill]);
+      setSkillInput("");
+    }
+  };
+
+  const removeSkill = (skill: string) => {
+    setSkills(skills.filter((s) => s !== skill));
+  };
 
   return {
-    skills,
+    skills, 
     skillInput,
     setSkillInput,
     addSkill,
-    removeSkill,
+    removeSkill, 
   };
 };
 

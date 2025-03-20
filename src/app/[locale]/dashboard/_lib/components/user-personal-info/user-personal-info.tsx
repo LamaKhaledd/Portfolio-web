@@ -1,4 +1,3 @@
-// PersonalInfo.js
 import React from "react";
 import { Flex, Paper, Stack, Text, Title } from "@mantine/core";
 import {
@@ -10,7 +9,7 @@ import {
 } from "@tabler/icons-react";
 import { PERSONAL_INFO } from "@dashboard/constants/cv-constants";
 import { MAIN_COLORS } from "@/core/constants/colors";
-import ContactItem from "../contact-item/ccontact-item";
+import ContactItem from "../contact-item/contact-item";
 
 const PersonalInfo = () => {
   const { name, title, email, phone, linkedin, github, address, bio } =

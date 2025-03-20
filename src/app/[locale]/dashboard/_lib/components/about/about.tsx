@@ -23,7 +23,7 @@ const About = () => {
         justify="space-between"
         pb={50}
       >
-        <AboutCard openContactModal={openContactModal} />{" "}
+        <AboutCard openContactModal={openContactModal} />
         <AboutDetails navigateToProjects={navigateToProjects} />
       </Flex>
 

@@ -1,4 +1,4 @@
-interface ArrowButtonProps {
+interface IArrowButtonProps {
   show: boolean;
   onClick: () => void;
 }

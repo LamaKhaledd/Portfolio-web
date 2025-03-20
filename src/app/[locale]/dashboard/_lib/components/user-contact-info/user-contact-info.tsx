@@ -1,7 +1,7 @@
 import React from "react";
 import { Anchor, Group, Paper, Text } from "@mantine/core";
 import { IconMail, IconPhone, IconMapPin } from "@tabler/icons-react";
-import { PERSONAL_INFO } from "@dashboard/constants/cv-constants"; // Adjust the path as needed
+import { PERSONAL_INFO } from "@dashboard/constants/cv-constants"; 
 
 const UserContactInfo = () => {
   const { email, phone, address } = PERSONAL_INFO;

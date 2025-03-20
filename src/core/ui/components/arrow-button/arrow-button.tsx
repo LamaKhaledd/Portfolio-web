@@ -3,7 +3,7 @@ import { IconArrowDown } from "@tabler/icons-react";
 import { Transition } from "@mantine/core";
 import PortfolioButton from "@components/button/portfolio-button";
 
-const ArrowButton: React.FC<ArrowButtonProps> = ({ show, onClick }) => (
+const ArrowButton: React.FC<IArrowButtonProps> = ({ show, onClick }) => (
   <Transition
     mounted={show}
     transition="fade-down"

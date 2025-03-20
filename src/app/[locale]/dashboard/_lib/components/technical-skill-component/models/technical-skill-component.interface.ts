@@ -1,3 +1,3 @@
-interface TechnicalSkillProps {
+interface ITechnicalSkillProps {
     skill: string; 
   }

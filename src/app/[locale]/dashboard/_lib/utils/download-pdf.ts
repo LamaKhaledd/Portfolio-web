@@ -8,7 +8,6 @@ export const downloadPDF = async (
   const element = document.getElementById(elementId);
   if (!element) return;
 
-  try {
     const canvas = await html2canvas(element, {
       scale: 2,
       scrollX: 0,
@@ -32,8 +31,4 @@ export const downloadPDF = async (
       position += pdfHeight;
     }
     pdf.save(fileName);
-  } catch (error) {
-    console.error("Error generating PDF:", error);
-    alert("Failed to generate PDF. Please try again.");
-  }
 };

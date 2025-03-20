@@ -1,4 +1,4 @@
-interface LanguageComponentProps {
+interface ILanguageComponentProps {
     language: string;
     proficiency: string;
   }

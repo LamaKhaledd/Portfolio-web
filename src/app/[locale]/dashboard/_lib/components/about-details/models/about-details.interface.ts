@@ -1,3 +1,3 @@
-interface AboutDetailsProps {
+interface IAboutDetailsProps {
   navigateToProjects: () => void;
 }

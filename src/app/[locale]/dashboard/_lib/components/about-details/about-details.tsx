@@ -1,33 +1,30 @@
 import { Flex, Text, Title } from "@mantine/core";
 import PortfolioButton from "@components/button/portfolio-button";
 import PortfolioImage from "@/core/ui/components/image/image";
-import { MONT_SERRAT } from "@dashboard/constants/fonts";
+import "@/app/globals.css";
 import {
-  LAMA_BIO,
-  LAMA_BIO_2,
-  LAMA_NAME,
+  USER_BIO,
+  USER_BIO_2,
+  USER_NAME,
   SEE_MY_PROJECTS,
 } from "@dashboard/constants/dashboard-data";
 import { MAIN_COLORS } from "@/core/constants/colors";
+import { TEXT_PROPS } from "@dashboard/constants/about-constants";
 
-const textProps = {
-  my: 5,
-  c: MAIN_COLORS.TEXT_PRIMARY,
-};
 
-const AboutDetails: React.FC<AboutDetailsProps> = ({ navigateToProjects }) => {
+const AboutDetails: React.FC<IAboutDetailsProps> = ({ navigateToProjects }) => {
   return (
     <Flex
       direction="column"
       gap="sm"
-      w={{ base: "100%", md: "50%" }}
+      w={{ md: "50%" }}
       align={{ base: "center", md: "flex-start" }}
     >
-      <Title order={2} className={MONT_SERRAT.className} pt={20}>
-        {LAMA_NAME}
+      <Title order={2} className="font-montserrat" pt={20}>
+        {USER_NAME}
       </Title>
-      <Text {...textProps}>{LAMA_BIO}</Text>
-      <Text {...textProps}>{LAMA_BIO_2}</Text>
+      <Text {...TEXT_PROPS}>{USER_BIO}</Text>
+      <Text {...TEXT_PROPS}>{USER_BIO_2}</Text>
 
       <PortfolioButton
         onClick={navigateToProjects}

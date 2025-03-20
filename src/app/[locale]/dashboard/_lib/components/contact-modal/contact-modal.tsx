@@ -3,7 +3,7 @@ import PortfolioButton from "@components/button/portfolio-button";
 import InputRenderer from "@InputRenderer/portfolio-inputs-renderer";
 import { CONTACT_FORM_SCHEMA } from "@dashboard/utils/contact-schema";
 
-const ContactModal: React.FC<ContactModalProps> = ({ opened, onClose }) => {
+const ContactModal: React.FC<IContactModalProps> = ({ opened, onClose }) => {
   return (
     <Modal
       opened={opened}

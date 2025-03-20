@@ -1,15 +1,12 @@
 import React from "react";
 import { Badge, Group, Paper, Stack, Text, Title } from "@mantine/core";
 
-interface ProjectDetailsProps {
-  title: string;
-  date: string;
-  description: string;
-  badges: string[];
-}
-
-const ProjectDetails: React.FC<ProjectDetailsProps> = ({ title, date, description, badges}) => {
-
+const ProjectDetails: React.FC<IProjectDetailsProps> = ({
+  title,
+  date,
+  description,
+  badges,
+}) => {
   return (
     <Paper withBorder p="md" radius="md">
       <Stack gap="xs">

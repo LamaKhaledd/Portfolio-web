@@ -1,4 +1,3 @@
-
-interface AboutCardProps {
-    openContactModal: () => void;
-  }
+interface IAboutCardProps {
+  openContactModal: () => void;
+}
