@@ -21,13 +21,17 @@
     "paths": {
       "@/*": ["./src/*"],
       "@ui/*": ["./src/core/ui/*"],
-      "@models/*": ["./src/core/ui/models/*"],
+      "@models/*": ["./src/core/models/*"],
       "@components*": ["./src/core/ui/components/*"],
       "@auth/*": ["./src/app/[locale]/(auth)/*"],
       "@action/*": ["./src/core/ui/components/toggle-theme/*"],
       "@hooks/*": ["./src/app/[locale]/(auth)/_lib/hooks/*"],
       "@InputRenderer/*": ["./src/core/ui/components/inputs-renderer/*"],
       "@authComponents/*": ["./src/app/[locale]/(auth)/_lib/components/*"],
+
+
+      "@dashboard/*": ["./src/app/[locale]/dashboard/_lib/*"],
+
       
     }
   },

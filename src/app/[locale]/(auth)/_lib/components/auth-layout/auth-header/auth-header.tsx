@@ -3,9 +3,10 @@ import { Card, Flex, Group, Text } from "@mantine/core";
 import Image from "next/image";
 import PortfolioButton from "@components/button/portfolio-button";
 import { LABELS } from "@auth/_lib/constants/header-labels";
-import { COLORS } from "@/core/ui/constants/colors";
+import { MAIN_COLORS } from "@/core/constants/colors";
 import { ActionToggle } from "@action/toggle-theme";
 import { useAuthRedirect } from "@hooks/use-auth-header-redirect";
+import "@/app/globals.css"; 
 
 export const AuthHeader = () => {
   const { loading, onLoginButtonClick } = useAuthRedirect();
@@ -20,7 +21,13 @@ export const AuthHeader = () => {
             width={50}
             height={50}
           />
-          <Text size="xl" fw="bold" ps="0.5rem" c={COLORS.blueDark} lts="1px">
+          <Text
+            size="xl"
+            fw="bold"
+            ps="0.5rem"
+            c={MAIN_COLORS.BLUE_DARK}
+            lts="1px"
+          >
             {LABELS.name}
           </Text>
         </Flex>
@@ -30,10 +37,9 @@ export const AuthHeader = () => {
             {LABELS.navItems.map((item, index) => (
               <Text
                 key={index}
-                size="1.1rem"
                 fw="bold"
-                c={COLORS.grayDark}
-                style={{ cursor: "pointer" }}
+                c={MAIN_COLORS.GRAY_DARK}
+                className="cursor-pointer"
               >
                 {item.label}
               </Text>

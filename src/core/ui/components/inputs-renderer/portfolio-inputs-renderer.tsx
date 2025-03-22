@@ -1,5 +1,5 @@
 import React from "react";
-import { getInputComponent } from "@ui/utils/inputs";
+import { getInputComponent } from "@/core/utils/inputs";
 import { InputSchema, ValuesTypes } from "@models/input-base.type";
 import { Control, Controller, useFormContext } from "react-hook-form";
 

@@ -1,12 +1,12 @@
 import React from "react";
 import { Select, MultiSelect } from "@mantine/core";
-import { ISelectInput } from "./models/portfolio-select.interface";
+import { IPortfolioSelectInput } from "./models/portfolio-select.interface";
 const PortfolioSelectInput = ({
   schema,
   value,
   onChange,
 }: {
-  schema: ISelectInput;
+  schema: IPortfolioSelectInput;
   value: string | string[];
   onChange: ({ value }: { value: string | string[] }) => void;
 }): React.ReactNode => {

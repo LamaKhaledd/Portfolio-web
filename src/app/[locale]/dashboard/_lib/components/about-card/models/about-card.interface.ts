@@ -1,0 +1,3 @@
+interface IAboutCardProps {
+  openContactModal: () => void;
+}

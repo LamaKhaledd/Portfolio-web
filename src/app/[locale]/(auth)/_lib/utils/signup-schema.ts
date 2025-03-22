@@ -1,4 +1,4 @@
-import { INPUT_TYPE } from "@/core/ui/constants/input-renderer-constants";
+import { INPUT_TYPE } from "@/core/constants/input-renderer-constants";
 
 
 export const signupSchema = [

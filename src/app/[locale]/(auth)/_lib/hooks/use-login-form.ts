@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { validationSchema } from "@auth/_lib/utils/login-validation-schema";
 import { AUTH_ROUTES } from "@auth/_lib/constants/auth-routes";
-import { submitHandler } from "@/core/ui/utils/submit-handler";
+import { submitHandler } from "@/core/utils/submit-handler";
 
 export const useLoginForm = () => {
   const [loading, setLoading] = useState(false);

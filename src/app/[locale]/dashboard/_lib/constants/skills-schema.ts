@@ -1,0 +1,68 @@
+export const skillsSchema = [
+  {
+    category: "Programming Languages",
+    skills: [
+      "C",
+      "C++",
+      "Java",
+      "JavaScript",
+      "TypeScript",
+      "PHP",
+      "Python",
+      "x86 Assembly",
+      "MIPS Assembly",
+      "VHDL",
+      "Verilog",
+      "System Verilog",
+    ],
+  },
+  {
+    category: "Backend Development",
+    skills: [
+      "Spring Boot",
+      "Spring Security",
+      "JPA",
+      "RESTful APIs",
+      "Docker",
+      "MySQL",
+      "Flask",
+      "RabbitMQ",
+      "Google Cloud",
+      "MongoDB",
+    ],
+  },
+  {
+    category: "Frontend Development",
+    skills: [
+      "HTML",
+      "CSS",
+      "SASS/SCSS",
+      "React",
+      "Flutter",
+      "Next.js",
+      "Mantine UI",
+    ],
+  },
+  {
+    category: "Tools",
+    skills: [
+      "Git",
+      "Docker",
+      "Maven",
+      "Junit",
+      "Cucumber",
+      "Word",
+      "Excel",
+      "PowerPoint",
+      "Canva",
+    ],
+  },
+  {
+    category: "Languages",
+    skills: [
+      "Arabic (Native)",
+      "English (Proficient)",
+      "Turkish (Some Understanding)",
+    ],
+  },
+];

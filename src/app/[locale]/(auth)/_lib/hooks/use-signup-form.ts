@@ -4,7 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useRouter } from "next/navigation";
 import { signUpSchema } from "@auth/_lib/utils/sign-up-validation-schema";
 import { AUTH_ROUTES } from "@auth/_lib/constants/auth-routes";
-import { submitHandler } from "@/core/ui/utils/submit-handler";
+import { submitHandler } from "@/core/utils/submit-handler";
 
 export const useSignUpForm = () => {
   const router = useRouter();
